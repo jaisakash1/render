@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
 import pickle
+from flask_cors import CORS 
 import numpy as np
 import pandas as pd
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)
 
 # Load the trained ML model (Ensure the correct path to the .pkl file)
 model_path = "feedback_rating_model.pkl"  # Change this if needed
